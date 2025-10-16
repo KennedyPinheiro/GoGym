@@ -5,19 +5,27 @@ O projeto foi desenvolvido em React Native e se comunica com o backend via API.
 
 ## Instalação
 
-Antes de tudo, certifique-se de ter o Node.js instalado na sua máquina.
+Antes de tudo, garanta que você tenha instalado:
+
+Node.js
+
+npm ou yarn
+
+Expo CLI (para rodar o app)
+
+Um emulador Android/iOS ou o app Expo Go no seu celular
 
 1. Entrar na pasta do projeto
 
-``cd frontend``
+       cd frontend
 
 2. Instalar as dependências
 
-`npm install`
+        npm install
 
 ou, se preferir:
 
-`npm i`
+        npm i
 
 ## Integração com o Backend
 
@@ -27,7 +35,7 @@ Passos:
 
 No terminal, execute:
 
-`hostname -I`
+      hostname -I
 
 Copie o endereço IPv4 retornado (ex: 192.168.1.9).
 
@@ -42,9 +50,32 @@ export const api = axios.create({
   baseURL: 'http://192.168.1.9:8000',
 });
 
+<hr>
+
+# Executando o Projeto
+
+Com tudo configurado, basta iniciar o servidor de desenvolvimento:
+
+      npx expo start
+ou
+
+    npm run start
+
+Após isso:
+
+Se estiver com o Expo Go instalado no celular, escaneie o QR Code que aparece no terminal ou na interface web.
+
+Se estiver usando um emulador Android, pressione a para abrir o app.
+
+Para iOS, pressione i (em macOS com Xcode configurado).
+
+<hr>
+
 ### Dica
 
 Se estiver executando o backend com o comando:
 
-`php artisan serve --host=0.0.0.0 --port=8000`
+    php artisan serve --host=0.0.0.0 --port=8000
+    
+e ambos os dispositivos (PC e celular) estiverem na mesma rede Wi-Fi, o app conseguirá se conectar normalmente ao backend usando o IP configurado.
 
